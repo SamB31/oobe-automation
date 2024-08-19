@@ -1,0 +1,3 @@
+C:/Users/Sam Blanton/Desktop/yolov8-onnx-cpp/build/CMakeFiles/YOLOv8CPP.dir
+C:/Users/Sam Blanton/Desktop/yolov8-onnx-cpp/build/CMakeFiles/edit_cache.dir
+C:/Users/Sam Blanton/Desktop/yolov8-onnx-cpp/build/CMakeFiles/rebuild_cache.dir

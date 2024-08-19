@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\YOLOv8CPP.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\YOLOv8CPP.dir/objects.a @CMakeFiles\YOLOv8CPP.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe  -g -g  -static-libgcc -static-libstdc++ -Wl,--whole-archive CMakeFiles\YOLOv8CPP.dir/objects.a -Wl,--no-whole-archive -o YOLOv8CPP.exe -Wl,--out-implib,libYOLOv8CPP.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\YOLOv8CPP.dir\linkLibs.rsp

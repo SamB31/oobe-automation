@@ -1,0 +1,34 @@
+cmake_minimum_required(VERSION 3.10)
+project(YOLOv8CPP)
+
+set(OpenCV_DIR /usr/local/lib/cmake/opencv4)  # Path to OpenCVConfig.cmake file
+
+# Path to ONNXRUNTIME
+set(ONNXRUNTIME_DIR /opt/onnxruntime)
+
+# Find OpenCV package
+find_package(OpenCV REQUIRED)
+
+# Include directories
+include_directories(${OpenCV_INCLUDE_DIRS})
+include_directories(${ONNXRUNTIME_DIR}/include)
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+# Recursively collect all source files under 'src' directory
+file(GLOB_RECURSE CURR_SOURCES src/*.cpp)
+
+# Create the executable
+add_executable(YOLOv8CPP ${CURR_SOURCES})
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Link libraries
+target_link_libraries(YOLOv8CPP ${OpenCV_LIBS})
+target_link_libraries(YOLOv8CPP ${ONNXRUNTIME_DIR}/lib/libonnxruntime.so)
+
+# For Unix systems
+if(UNIX)
+    target_link_libraries(YOLOv8CPP ${ONNXRUNTIME_DIR}/lib/libonnxruntime.so)
+endif(UNIX)
